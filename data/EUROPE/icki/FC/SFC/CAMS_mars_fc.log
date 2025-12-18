@@ -1,0 +1,81 @@
+2025-12-17 13:09:47,578 | INFO | Script start (UTC): 2025-12-17T13:09:47
+2025-12-17 13:09:47,579 | INFO | Base dir: /home/agkiokas/MARS/data/EUROPE/icki/FC/SFC
+2025-12-17 13:09:47,580 | INFO | Downloading -> CAMS_icki_fc_sfc_000000_20251217_D1.nc
+2025-12-17 13:09:58,965 | ERROR | FAILED D1: "ecmwf.API error 1: User 'anonymous' has no access to services/mars"
+2025-12-17 13:09:58,966 | INFO | Downloading -> CAMS_icki_fc_sfc_000000_20251217_D3.nc
+2025-12-17 13:10:00,078 | ERROR | FAILED D3: "ecmwf.API error 1: User 'anonymous' has no access to services/mars"
+2025-12-17 13:10:00,079 | INFO | Downloading -> CAMS_icki_fc_sfc_000000_20251217_D5.nc
+2025-12-17 13:10:01,089 | ERROR | FAILED D5: "ecmwf.API error 1: User 'anonymous' has no access to services/mars"
+2025-12-17 13:10:01,090 | INFO | Script end (UTC): 2025-12-17T13:10:01
+2025-12-17 13:10:01,091 | INFO | Elapsed: 0:00:13.511701
+2025-12-17 13:10:01,091 | WARNING | Some windows failed: D1, D3, D5
+2025-12-17 13:28:02,454 | INFO | Script start (UTC): 2025-12-17T13:28:02
+2025-12-17 13:28:02,456 | INFO | Base dir: /home/agkiokas/MARS/data/EUROPE/icki/FC/SFC
+2025-12-17 13:28:02,457 | INFO | Downloading -> CAMS_icki_fc_sfc_000000_20251217_D1.nc
+2025-12-17 13:28:21,805 | INFO | Done: CAMS_icki_fc_sfc_000000_20251217_D1.nc | 0.00 MB | 19.3 s
+2025-12-17 13:28:21,806 | INFO | Downloading -> CAMS_icki_fc_sfc_000000_20251217_D3.nc
+2025-12-17 13:28:31,102 | INFO | Done: CAMS_icki_fc_sfc_000000_20251217_D3.nc | 0.00 MB | 9.3 s
+2025-12-17 13:28:31,103 | INFO | Downloading -> CAMS_icki_fc_sfc_000000_20251217_D5.nc
+2025-12-17 13:28:40,466 | INFO | Done: CAMS_icki_fc_sfc_000000_20251217_D5.nc | 0.00 MB | 9.4 s
+2025-12-17 13:28:40,467 | INFO | Script end (UTC): 2025-12-17T13:28:40
+2025-12-17 13:28:40,468 | INFO | Elapsed: 0:00:38.013168
+2025-12-17 13:28:40,468 | INFO | All requested windows downloaded successfully.
+2025-12-18 09:52:38,865 | INFO | Script start (UTC): 2025-12-18T09:52:38+00:00
+2025-12-18 09:52:38,866 | INFO | Base dir: /home/agkiokas/MARS/data/EUROPE/icki/FC/SFC
+2025-12-18 09:52:50,624 | INFO | Script start (UTC): 2025-12-18T09:52:50+00:00
+2025-12-18 09:52:50,626 | INFO | Base dir: /home/agkiokas/MARS/data/EUROPE/icki/FC/SFC
+2025-12-18 09:52:52,514 | INFO | Script start (UTC): 2025-12-18T09:52:52+00:00
+2025-12-18 09:52:52,516 | INFO | Base dir: /home/agkiokas/MARS/data/EUROPE/icki/FC/SFC
+2025-12-18 09:52:52,517 | INFO | Downloading -> 18_12_2025-18_12_2025.nc
+2025-12-18 09:53:03,523 | ERROR | FAILED day_idx=0 (18_12_2025-18_12_2025): "ecmwf.API error 1: User 'anonymous' has no access to services/mars"
+2025-12-18 09:53:03,523 | INFO | Downloading -> 20_12_2025-20_12_2025.nc
+2025-12-18 09:53:04,523 | ERROR | FAILED day_idx=2 (20_12_2025-20_12_2025): "ecmwf.API error 1: User 'anonymous' has no access to services/mars"
+2025-12-18 09:53:04,524 | INFO | Downloading -> 22_12_2025-22_12_2025.nc
+2025-12-18 09:53:05,519 | ERROR | FAILED day_idx=4 (22_12_2025-22_12_2025): "ecmwf.API error 1: User 'anonymous' has no access to services/mars"
+2025-12-18 09:53:05,519 | INFO | Script end (UTC): 2025-12-18T09:53:05+00:00
+2025-12-18 09:53:05,520 | INFO | Elapsed: 0:00:13.005686
+2025-12-18 09:53:05,520 | WARNING | Some downloads failed: day0:18_12_2025-18_12_2025, day2:20_12_2025-20_12_2025, day4:22_12_2025-22_12_2025
+2025-12-18 09:59:57,694 | INFO | Script start (UTC): 2025-12-18T09:59:57+00:00
+2025-12-18 09:59:57,695 | INFO | Base dir: /home/agkiokas/MARS/data/EUROPE/icki/FC/SFC
+2025-12-18 09:59:57,696 | INFO | Downloading -> 18_12_2025-18_12_2025.nc
+2025-12-18 10:00:06,262 | ERROR | FAILED day_idx=0 (18_12_2025-18_12_2025): 'ecmwf.API error 1: ERROR 89 (MARS_EXPECTED_FIELDS): Expected 16, got 0'
+2025-12-18 10:00:06,263 | INFO | Downloading -> 20_12_2025-20_12_2025.nc
+2025-12-18 10:00:14,908 | ERROR | FAILED day_idx=2 (20_12_2025-20_12_2025): 'ecmwf.API error 1: ERROR 89 (MARS_EXPECTED_FIELDS): Expected 16, got 0'
+2025-12-18 10:00:14,909 | INFO | Downloading -> 22_12_2025-22_12_2025.nc
+2025-12-18 10:00:23,832 | ERROR | FAILED day_idx=4 (22_12_2025-22_12_2025): 'ecmwf.API error 1: ERROR 89 (MARS_EXPECTED_FIELDS): Expected 16, got 0'
+2025-12-18 10:00:23,833 | INFO | Script end (UTC): 2025-12-18T10:00:23+00:00
+2025-12-18 10:00:23,833 | INFO | Elapsed: 0:00:26.138543
+2025-12-18 10:00:23,834 | WARNING | Some downloads failed: day0:18_12_2025-18_12_2025, day2:20_12_2025-20_12_2025, day4:22_12_2025-22_12_2025
+2025-12-18 10:07:57,318 | INFO | Script start (UTC): 2025-12-18T10:07:57+00:00
+2025-12-18 10:07:57,319 | INFO | Base dir: /home/agkiokas/MARS/data/EUROPE/icki/FC/SFC
+2025-12-18 10:07:57,320 | INFO | Downloading -> 15_12_2025-15_12_2025.nc
+2025-12-18 10:08:07,284 | INFO | Done: 15_12_2025-15_12_2025.nc | 0.70 MB | 10.0 s
+2025-12-18 10:08:07,284 | INFO | Downloading -> 17_12_2025-17_12_2025.nc
+2025-12-18 10:08:22,632 | INFO | Done: 17_12_2025-17_12_2025.nc | 0.70 MB | 15.3 s
+2025-12-18 10:08:22,634 | INFO | Downloading -> 19_12_2025-19_12_2025.nc
+2025-12-18 10:08:32,249 | INFO | Done: 19_12_2025-19_12_2025.nc | 0.70 MB | 9.6 s
+2025-12-18 10:08:32,250 | INFO | Script end (UTC): 2025-12-18T10:08:32+00:00
+2025-12-18 10:08:32,251 | INFO | Elapsed: 0:00:34.932058
+2025-12-18 10:08:32,251 | INFO | All requested day windows downloaded successfully.
+2025-12-18 10:15:39,977 | INFO | Script start (UTC): 2025-12-18T10:15:39+00:00
+2025-12-18 10:15:39,977 | INFO | Base dir: /home/agkiokas/MARS/data/EUROPE/icki/FC/SFC
+2025-12-18 10:15:39,978 | INFO | Downloading -> 18_12_2025-18_12_2025.nc
+2025-12-18 10:15:48,515 | ERROR | FAILED day_idx=0 (18_12_2025-18_12_2025): 'ecmwf.API error 1: ERROR 89 (MARS_EXPECTED_FIELDS): Expected 16, got 0'
+2025-12-18 10:15:48,516 | INFO | Downloading -> 20_12_2025-20_12_2025.nc
+2025-12-18 10:15:57,227 | ERROR | FAILED day_idx=2 (20_12_2025-20_12_2025): 'ecmwf.API error 1: ERROR 89 (MARS_EXPECTED_FIELDS): Expected 16, got 0'
+2025-12-18 10:15:57,228 | INFO | Downloading -> 22_12_2025-22_12_2025.nc
+2025-12-18 10:16:05,823 | ERROR | FAILED day_idx=4 (22_12_2025-22_12_2025): 'ecmwf.API error 1: ERROR 89 (MARS_EXPECTED_FIELDS): Expected 16, got 0'
+2025-12-18 10:16:05,824 | INFO | Script end (UTC): 2025-12-18T10:16:05+00:00
+2025-12-18 10:16:05,824 | INFO | Elapsed: 0:00:25.847105
+2025-12-18 10:16:05,825 | WARNING | Some downloads failed: day0:18_12_2025-18_12_2025, day2:20_12_2025-20_12_2025, day4:22_12_2025-22_12_2025
+2025-12-18 10:16:48,796 | INFO | Script start (UTC): 2025-12-18T10:16:48+00:00
+2025-12-18 10:16:48,798 | INFO | Base dir: /home/agkiokas/MARS/data/EUROPE/icki/FC/SFC
+2025-12-18 10:16:48,798 | INFO | Downloading -> 14_12_2025-14_12_2025.nc
+2025-12-18 10:16:58,696 | INFO | Done: 14_12_2025-14_12_2025.nc | 3.23 MB | 9.9 s
+2025-12-18 10:16:58,697 | INFO | Downloading -> 16_12_2025-16_12_2025.nc
+2025-12-18 10:17:08,990 | INFO | Done: 16_12_2025-16_12_2025.nc | 3.23 MB | 10.3 s
+2025-12-18 10:17:08,990 | INFO | Downloading -> 18_12_2025-18_12_2025.nc
+2025-12-18 10:17:24,439 | INFO | Done: 18_12_2025-18_12_2025.nc | 3.23 MB | 15.4 s
+2025-12-18 10:17:24,440 | INFO | Script end (UTC): 2025-12-18T10:17:24+00:00
+2025-12-18 10:17:24,441 | INFO | Elapsed: 0:00:35.644245
+2025-12-18 10:17:24,441 | INFO | All requested day windows downloaded successfully.
