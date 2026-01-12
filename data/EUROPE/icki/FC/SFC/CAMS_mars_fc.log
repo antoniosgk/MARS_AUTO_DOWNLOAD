@@ -79,3 +79,27 @@
 2025-12-18 10:17:24,440 | INFO | Script end (UTC): 2025-12-18T10:17:24+00:00
 2025-12-18 10:17:24,441 | INFO | Elapsed: 0:00:35.644245
 2025-12-18 10:17:24,441 | INFO | All requested day windows downloaded successfully.
+2026-01-12 09:00:48,261 | INFO | Script start (UTC): 2026-01-12T09:00:48+00:00
+2026-01-12 09:00:48,262 | INFO | Base dir: /home/agkiokas/MARS/data/EUROPE/icki/FC/SFC
+2026-01-12 09:00:48,264 | INFO | Downloading -> 08_01_2026-08_01_2026.nc
+2026-01-12 09:01:24,182 | INFO | Script start (UTC): 2026-01-12T09:01:24+00:00
+2026-01-12 09:01:24,184 | INFO | Base dir: /home/agkiokas/MARS/data/EUROPE/icki/FC/SFC
+2026-01-12 09:01:37,379 | INFO | Script start (UTC): 2026-01-12T09:01:37+00:00
+2026-01-12 09:01:37,380 | INFO | Base dir: /home/agkiokas/MARS/data/EUROPE/icki/FC/SFC
+2026-01-12 09:01:37,381 | INFO | Downloading -> 08_01_2026-08_01_2026.nc
+2026-01-12 09:01:58,272 | INFO | Done: 08_01_2026-08_01_2026.nc | 3.23 MB | 20.9 s
+2026-01-12 09:01:58,273 | INFO | Downloading -> 10_01_2026-10_01_2026.nc
+2026-01-12 09:02:08,336 | INFO | Done: 10_01_2026-10_01_2026.nc | 3.23 MB | 10.1 s
+2026-01-12 09:02:08,337 | INFO | Downloading -> 12_01_2026-12_01_2026.nc
+2026-01-12 09:02:24,012 | INFO | Done: 12_01_2026-12_01_2026.nc | 3.23 MB | 15.7 s
+2026-01-12 09:02:24,013 | INFO | Script end (UTC): 2026-01-12T09:02:24+00:00
+2026-01-12 09:02:24,013 | INFO | Elapsed: 0:00:46.633821
+2026-01-12 09:02:24,013 | INFO | All requested day windows downloaded successfully.
+2026-01-12 10:12:29,430 | INFO | Script start (UTC): 2026-01-12T10:12:29+00:00
+2026-01-12 10:12:29,430 | INFO | Base dir: /home/agkiokas/MARS/data/EUROPE/icki/FC/SFC
+2026-01-12 10:12:29,434 | INFO | Skip existing: 08_01_2026-08_01_2026.nc
+2026-01-12 10:12:29,434 | INFO | Skip existing: 10_01_2026-10_01_2026.nc
+2026-01-12 10:12:29,434 | INFO | Skip existing: 12_01_2026-12_01_2026.nc
+2026-01-12 10:12:29,434 | INFO | Script end (UTC): 2026-01-12T10:12:29+00:00
+2026-01-12 10:12:29,434 | INFO | Elapsed: 0:00:00.004031
+2026-01-12 10:12:29,434 | INFO | All requested day windows downloaded successfully.
