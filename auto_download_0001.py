@@ -19,21 +19,21 @@ os.environ["ECMWF_API_EMAIL"] = "zerefos@geol.uoa.gr"
 server=ECMWFService("mars")
 print("✅ Connected to ECMWF API")
 DOWNLOAD_ROOT = Path("/home/agkiokas/MARS/data/")  # folder root
-REGNAME = "EUROPE"
-EXPVER = "icki"  #or 0001
+REGNAME = "GLOBE"
+EXPVER = "0001"  #or icki
 TYPE_ = "fc"   #or reanalysis
-LEVTYPE = "sfc"  # sfc / pl / ml / etc.#often ml
+LEVTYPE = "ml"  # sfc / pl / ml / etc.#often ml
 
 # MARS keys
 CLASS_ = "rd"  #mc or rd
 STREAM = "oper"
-PARAM = "207.210/209.210" 
+PARAM = "210.121"   #210.121/210.122/210.123/210.203 #no2/so2/co/o3
 GRID = "0.4/0.4"
-AREA = "60/-120/-20/90"  # N/W/S/E
+AREA = "60/-120/-20/90"  # N/W/S/E 90/-180/-90/180 for the whole globe
 FORMAT_ = "netcdf"   # "netcdf" or "grib"
 
 # Optional vertical levels (ONLY if levtype supports it; set None for sfc)
-LEVELIST: Optional[str] = None  # e.g. "110/to/137" for pl/ml if applicable
+LEVELIST: Optional[str] = 110/137  # e.g. "110/to/137" for pl/ml if applicable or None
 
 # Forecast selection
 INIT_TIME_UTC = "00:00:00"
@@ -44,7 +44,7 @@ MAX_FC_HOURS = 120
 # day 0 = init date (first day), day 1 = next day, etc.
 KEEP_DAY_INDICES = [0, 2, 4]  # keep day0, day2, day4 (skip day1 and day3)
 
-RUN_DATE_OFFSET_DAYS = 3   #HOW MANY DAYS BACK IN TIME YOU WANT TO DOWNLOAD?0 MEANS TODAY
+RUN_DATE_OFFSET_DAYS = 4   #HOW MANY DAYS BACK IN TIME YOU WANT TO DOWNLOAD?0 MEANS TODAY
 
 # Logging
 LOG_NAME = "CAMS_mars_fc.log"
