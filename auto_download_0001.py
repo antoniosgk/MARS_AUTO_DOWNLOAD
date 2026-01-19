@@ -25,7 +25,7 @@ TYPE_ = "fc"   #or reanalysis
 LEVTYPE = "ml"  # sfc / pl / ml / etc.#often ml
 
 # MARS keys
-CLASS_ = "rd"  #mc or rd
+CLASS_ = "mc"  #mc or rd
 STREAM = "oper"
 PARAM = "210.121"   #210.121/210.122/210.123/210.203 #no2/so2/co/o3
 GRID = "0.4/0.4"
@@ -33,7 +33,7 @@ AREA = "60/-120/-20/90"  # N/W/S/E 90/-180/-90/180 for the whole globe
 FORMAT_ = "netcdf"   # "netcdf" or "grib"
 
 # Optional vertical levels (ONLY if levtype supports it; set None for sfc)
-LEVELIST: Optional[str] = 110/137  # e.g. "110/to/137" for pl/ml if applicable or None
+LEVELIST: Optional[str] = "110/to/137"  # e.g. "110/to/137" for pl/ml if applicable or None
 
 # Forecast selection
 INIT_TIME_UTC = "00:00:00"
@@ -44,8 +44,10 @@ MAX_FC_HOURS = 120
 # day 0 = init date (first day), day 1 = next day, etc.
 KEEP_DAY_INDICES = [0, 2, 4]  # keep day0, day2, day4 (skip day1 and day3)
 
-RUN_DATE_OFFSET_DAYS = 4   #HOW MANY DAYS BACK IN TIME YOU WANT TO DOWNLOAD?0 MEANS TODAY
-
+#HOW MANY DAYS BACK IN TIME YOU WANT TO DOWNLOAD?0 MEANS TODAY for RUN_DATE_OFFSET_DAYS
+# Choose ONE:
+RUN_DATE_YYYYMMDD: Optional[str] = None   # e.g. "20260114" (if set, overrides offset)
+RUN_DATE_OFFSET_DAYS = 4                  # used only if RUN_DATE_YYYYMMDD is None,
 # Logging
 LOG_NAME = "CAMS_mars_fc.log"
 
@@ -77,6 +79,15 @@ def setup_logger(log_path: Path) -> logging.Logger:
 def now_utc() -> dt.datetime:
     return dt.datetime.now(dt.timezone.utc)
 
+def resolve_run_date_yyyymmdd() -> str:
+    if RUN_DATE_YYYYMMDD is not None:
+        s = RUN_DATE_YYYYMMDD.strip()
+        if len(s) != 8 or not s.isdigit():
+            raise ValueError(f"RUN_DATE_YYYYMMDD must be 'YYYYMMDD', got: {RUN_DATE_YYYYMMDD}")
+        # validate it is a real calendar date
+        dt.datetime.strptime(s, "%Y%m%d")
+        return s
+    return yyyymmdd_utc(RUN_DATE_OFFSET_DAYS)
 
 def yyyymmdd_utc(offset_days: int = 0) -> str:
     d = (now_utc().date() - dt.timedelta(days=offset_days))
@@ -127,14 +138,13 @@ def steps_as_list(start_h: int, end_h: int, step_h: int) -> Tuple[str, int]:
     return "/".join(str(v) for v in vals), len(vals)
 
 
-def validity_label(init_dt: dt.datetime, start_h: int, end_h: int) -> str:
+def label_init_to_valid(init_dt: dt.datetime, start_h: int) -> str:
     """
-    File title as 'DD_MM_YYYY-DD_MM_YYYY' based on validity dates.
-    With our day windows (00..21), start/end fall on the same calendar day.
+    File title as 'INITDATE-VALIDDATE'.
+    Example for init=14/01 and day_idx=2 (48h): '14_01_2026-16_01_2026'
     """
-    valid_start = init_dt + dt.timedelta(hours=start_h)
-    valid_end = init_dt + dt.timedelta(hours=end_h)
-    return f"{fmt_dmy(valid_start)}-{fmt_dmy(valid_end)}"
+    valid_dt = init_dt + dt.timedelta(hours=start_h)
+    return f"{fmt_dmy(init_dt)}-{fmt_dmy(valid_dt)}"
 
 
 def build_request(run_date: str, init_time_utc: str, step_str: str, logger: logging.Logger) -> Dict[str, str]:
@@ -254,8 +264,9 @@ def main() -> int:
 
     server = ECMWFService("mars")
 
-    run_date = yyyymmdd_utc(RUN_DATE_OFFSET_DAYS)
+    run_date = resolve_run_date_yyyymmdd()
     init_dt = init_datetime_utc(run_date, INIT_TIME_UTC)
+    
 
     run_dir = build_run_dir(base_dir, run_date, INIT_TIME_UTC)
     ensure_dir(run_dir)
@@ -266,7 +277,7 @@ def main() -> int:
         h0, h1 = day_window_hours(day_idx)
         step_str, ntime = steps_as_list(h0, h1, STEP_HOURS)
 
-        label = validity_label(init_dt, h0, h1)  # e.g. "18_12_2025-18_12_2025"
+        label = label_init_to_valid(init_dt, h0)
         out_name = f"{label}.nc"
         out_path = run_dir / out_name
 

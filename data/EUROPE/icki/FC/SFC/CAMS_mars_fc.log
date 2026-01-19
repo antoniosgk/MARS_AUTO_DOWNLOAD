@@ -210,3 +210,6 @@
 2026-01-19 08:17:35,990 | INFO | Script end (UTC): 2026-01-19T08:17:35+00:00
 2026-01-19 08:17:35,990 | INFO | Elapsed: 0:02:49.591104
 2026-01-19 08:17:35,991 | INFO | All requested day windows downloaded successfully.
+2026-01-19 09:25:35,214 | INFO | Script start (UTC): 2026-01-19T09:25:35+00:00
+2026-01-19 09:25:35,215 | INFO | Base dir: /home/agkiokas/MARS/data/EUROPE/icki/FC/SFC
+2026-01-19 09:25:35,216 | INFO | Downloading -> 17_01_2026-17_01_2026.nc
